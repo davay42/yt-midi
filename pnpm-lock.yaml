@@ -4,6 +4,7 @@ specifiers:
   '@iconify/json': ^1.1.332
   '@vitejs/plugin-vue': ^1.2.2
   '@vue/compiler-sfc': ^3.0.5
+  '@vueuse/core': ^4.9.1
   pug: ^3.0.2
   vite: ^2.2.3
   vite-aliases: ^0.6.3
@@ -13,6 +14,7 @@ specifiers:
   vue: ^3.0.5
 
 dependencies:
+  '@vueuse/core': 4.9.1_vue@3.0.11
   vue: 3.0.11
 
 devDependencies:
@@ -149,6 +151,25 @@ packages:
 
   /@vue/shared/3.0.11:
     resolution: {integrity: sha512-b+zB8A2so8eCE0JsxjL24J7vdGl8rzPQ09hZNhystm+KqSbKcAej1A+Hbva1rCMmTTqA+hFnUSDc5kouEo0JzA==}
+
+  /@vueuse/core/4.9.1_vue@3.0.11:
+    resolution: {integrity: sha512-BmmEEaistQqNsGlmmpwS2fRkzpf/2riBnUAmm4uDOj4ZDUpssCvCyTeOoIGbZYg92Hzaz0YF9qSeE7megjYLCg==}
+    dependencies:
+      '@vueuse/shared': 4.9.1_vue@3.0.11
+      vue-demi: 0.9.0_vue@3.0.11
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  /@vueuse/shared/4.9.1_vue@3.0.11:
+    resolution: {integrity: sha512-5jj+/Ve7e82LP4OFpU8jBRhjC7QGUxI95U2m4bB2BGuWA8v6r2EVV7AVkU/rXZ5EvRoYkAnUs8jWRCj0QlD6XQ==}
+    dependencies:
+      vue-demi: 0.9.0_vue@3.0.11
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   /@windicss/plugin-utils/0.15.10:
     resolution: {integrity: sha512-xhC/d2oqjN1XEjXzG1+8YLOXiktIq3kPXOH3Rv0XOGdmN27XV7eur5g/yXE0fQ8xGrrzOijUb3qAItTgCO1hFA==}
@@ -997,6 +1018,20 @@ packages:
     resolution: {integrity: sha1-YU9/v42AHwu18GYfWy9XhXUOTwk=}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /vue-demi/0.9.0_vue@3.0.11:
+    resolution: {integrity: sha512-f8vVUpC726YXv99fF/3zHaw5CUYbP5H/DVWBN+pncXM8P2Uz88kkffwj9yD7MukuVzPICDHNrgS3VC2ursaP7g==}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-beta.1
+      vue: ^2.6.0 || >=3.0.0-rc.1
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.0.11
+    dev: false
 
   /vue-template-es2015-compiler/1.9.1:
     resolution: {integrity: sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==}
