@@ -1,4 +1,5 @@
 import settings from '../../client.json'
+import { useFetch, createFetch } from '@vueuse/core'
 
 const url = new URL('https://accounts.google.com/o/oauth2/auth')
 
@@ -10,6 +11,21 @@ url.searchParams.set('scope', 'https://www.googleapis.com/auth/youtube')
 export function initAuth() {
   window.open(url, '_blank').focus()
 }
+
+// export const useMyFetch = createFetch({
+//   baseUrl: 'https://www.googleapis.com/youtube/v3/',
+//   options: {
+//     async beforeFetch({ options }) {
+//       options.headers = options.headers || {}
+//       options.headers.Authorization = `Bearer ${params.access_token}`
+
+//       return { options }
+//     },
+//   },
+//   fetchOptions: {
+//     mode: 'cors',
+//   },
+// })
 
 // https://stackoverflow.com/questions/8486099/how-do-i-parse-a-url-query-parameters-in-javascript
 export function getJsonFromUrl(url) {
