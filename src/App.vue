@@ -2,7 +2,10 @@
 .flex.flex-col.p-16.items-center
   h1.text-4xl.font-bold Hello!
 .flex.flex-col
-  settings
+  //auth
+
+any-stream
+
 
   
 </template>
@@ -17,5 +20,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  line-height: 2em;
+  overflow-wrap: anywhere;
 }
 </style>

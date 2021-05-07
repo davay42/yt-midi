@@ -11,7 +11,7 @@
 import { defineProps, onMounted, onBeforeUnmount } from 'vue'
 import { useFetch, createFetch } from '@vueuse/core'
 const props = defineProps({
-  id: String,
+  id: 'Cg0KC0FkVXc1UmR5WnhJKicKGFVDNnFyRzNXOFNNSzBqaW9yMm9sa2EzZxILQWRVdzVSZHlaeEk',
   token: String,
 });
 

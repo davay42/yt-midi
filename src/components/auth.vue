@@ -2,9 +2,9 @@
 .flex.flex-col
   button.button(@click="initAuth()") INIT
 
-  p {{ params }}
+  p(v-if="params?.access_token") {{ params }}
 
-  .pt-6 {{ data }}
+  .pt-6(v-if="!data?.error") {{ data }}
   .font-bold.text-3xl.mt-4.p-4 Live Broadcasts
   .mt-6(v-if="d")
     .p-2.flex(v-for="stream in d.items", :key="stream.id") 
@@ -25,7 +25,7 @@ const url = new URL('https://www.googleapis.com/oauth2/v1/tokeninfo')
 
 url.searchParams.set('access_token', params.access_token)
 
-const { isFetching, error, data } = useFetch(url);
+const { isFetching, error, data } = useFetch(url).json();
 
 const useMyFetch = createFetch({
   baseUrl: 'https://www.googleapis.com/youtube/v3/',
