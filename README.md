@@ -14,6 +14,7 @@ React to a broadcast chat messages as you want.
   - [vueuse](https://vueuse.org/)
     - [useFetch](https://vueuse.org/core/useFetch/)
 
+
 ### Useful links
 
 - https://www.youtube.com/watch?v=v0MIT9xqV2g
@@ -27,3 +28,7 @@ React to a broadcast chat messages as you want.
 - https://github.com/jonnyk20/youtube-chatbot-demo
 - https://github.com/codevjs/Youtube-Chat-Bot
 - https://github.com/davay42/youtube-live-chat-moderator/
+
+### API quota is small - 10 000 requests per day
+
+https://support.google.com/youtube/contact/yt_api_form Request more?
